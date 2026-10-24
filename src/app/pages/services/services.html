@@ -1,0 +1,45 @@
+<section class="section">
+  <div class="container">
+    <p class="section-label">{{ 'servicesPage.label' | t }}</p>
+    <h1 class="section-title">{{ 'servicesPage.title' | t }}</h1>
+    <p class="section-lead">{{ 'servicesPage.lead' | t }}</p>
+
+    <div class="services-list">
+      @for (service of services; track service.id) {
+        <article
+          class="service-block surface-card"
+          [attr.id]="service.id"
+          [class.is-featured]="service.featured"
+        >
+          <div class="service-block__intro">
+            <h2>{{ service.titleKey | t }}</h2>
+            <p>{{ service.summaryKey | t }}</p>
+            @if (service.id === 'post-launch') {
+              <p class="note">{{ 'servicesPage.supportNote' | t }}</p>
+            }
+            @if (service.id === 'marketing') {
+              <p class="note">{{ 'servicesPage.marketingNote' | t }}</p>
+            }
+          </div>
+          <ul>
+            @for (point of service.pointKeys; track point) {
+              <li>{{ point | t }}</li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+
+    <div class="process-section">
+      <h2 class="section-title">{{ 'home.approachTitle' | t }}</h2>
+      <p class="section-lead">{{ 'home.approachLead' | t }}</p>
+      <app-process-steps />
+    </div>
+  </div>
+</section>
+
+<app-section-cta
+  titleKey="home.ctaTitle"
+  bodyKey="home.ctaBody"
+  secondaryLabelKey="common.exploreProducts"
+/>

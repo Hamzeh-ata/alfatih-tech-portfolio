@@ -1,0 +1,51 @@
+.visual {
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+  border-radius: calc(var(--radius-lg) - 4px);
+  border: 1px solid var(--border-subtle);
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--product-accent) 22%, transparent), transparent 45%),
+    #0a1220;
+  aspect-ratio: 16 / 9;
+}
+
+.visual.is-compact {
+  min-height: 150px;
+}
+
+.visual__note {
+  position: absolute;
+  top: 0.75rem;
+  inset-inline-end: 0.75rem;
+  z-index: 2;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.visual__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s var(--ease);
+}
+
+.visual:hover .visual__image {
+  transform: scale(1.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .visual__image {
+    transition: none;
+  }
+
+  .visual:hover .visual__image {
+    transform: none;
+  }
+}

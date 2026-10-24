@@ -1,0 +1,43 @@
+.team-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  padding: 1.25rem;
+  align-items: start;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(59, 158, 255, 0.25), rgba(45, 212, 191, 0.12));
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.team-card h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+}
+
+.role {
+  margin: 0 0 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.team-card a {
+  display: block;
+  color: var(--accent);
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.team-card a:hover {
+  text-decoration: underline;
+}

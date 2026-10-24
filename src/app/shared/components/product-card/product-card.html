@@ -1,0 +1,23 @@
+<article class="product-card" [class.is-featured]="featured()" [style.--card-accent]="product().accent">
+  <a [routerLink]="['/products', product().slug]" class="product-card__link">
+    <div class="product-card__visual">
+      <app-product-visual
+        [image]="product().image"
+        [name]="product().name"
+        [accent]="product().accent"
+        [compact]="true"
+        [showNote]="false"
+      />
+    </div>
+    <div class="product-card__body">
+      <div class="product-card__meta">
+        <h3>{{ product().nameKey | t }}</h3>
+        @if (product().status === 'concept') {
+          <span class="badge">{{ 'common.concept' | t }}</span>
+        }
+      </div>
+      <p>{{ product().descriptionKey | t }}</p>
+      <span class="more">{{ 'common.viewProduct' | t }}</span>
+    </div>
+  </a>
+</article>

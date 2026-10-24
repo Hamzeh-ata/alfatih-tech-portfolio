@@ -1,0 +1,14 @@
+<section class="section-cta">
+  <div class="container section-cta__panel surface-card">
+    <div>
+      <h2>{{ titleKey() | t }}</h2>
+      <p>{{ bodyKey() | t }}</p>
+    </div>
+    <div class="section-cta__actions">
+      <a [routerLink]="primaryLink()" class="btn btn-primary">{{ primaryLabelKey() | t }}</a>
+      @if (secondaryLabelKey(); as secondaryKey) {
+        <a [routerLink]="secondaryLink()" class="btn btn-secondary">{{ secondaryKey | t }}</a>
+      }
+    </div>
+  </div>
+</section>

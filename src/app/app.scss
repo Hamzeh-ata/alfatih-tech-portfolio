@@ -1,0 +1,22 @@
+.skip-link {
+  position: fixed;
+  top: 0;
+  inset-inline-start: 1rem;
+  z-index: 300;
+  transform: translateY(-120%);
+  padding: 0.65rem 0.9rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(1rem);
+  pointer-events: auto;
+}
+
+main {
+  min-height: calc(100vh - var(--header-h) - 220px);
+}

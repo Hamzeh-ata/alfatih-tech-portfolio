@@ -1,0 +1,143 @@
+<section class="hero section">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="section-label">{{ 'home.heroLabel' | t }}</p>
+      <h1 class="hero__title">{{ 'home.heroTitle' | t }}</h1>
+      <p class="hero__lead">{{ 'home.heroDescription' | t }}</p>
+      <div class="hero__actions">
+        <a routerLink="/products" class="btn btn-primary">{{ 'common.exploreProducts' | t }}</a>
+        <a routerLink="/contact" class="btn btn-secondary">{{ 'common.discussProject' | t }}</a>
+      </div>
+    </div>
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero-stage">
+        <div class="hero-stage__glow hero-stage__glow--a"></div>
+        <div class="hero-stage__glow hero-stage__glow--b"></div>
+        <div class="hero-stage__grid"></div>
+        <div class="hero-stage__frame">
+          <div class="hero-stage__chrome">
+            <span></span><span></span><span></span>
+            <strong>Postlane</strong>
+          </div>
+          <div class="hero-stage__main-wrap">
+            <img
+              class="hero-stage__main"
+              src="/assets/images/products/postlane-cover.jpg"
+              alt="Postlane"
+              width="960"
+              height="540"
+            />
+          </div>
+        </div>
+        <div class="hero-stage__card hero-stage__card--b">
+          <img src="/assets/images/products/inkplay-cover.jpg" alt="InkPlay" width="320" height="180" />
+          <span>InkPlay</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section intro">
+  <div class="container intro__shell">
+    <div class="intro__glow" aria-hidden="true"></div>
+    <div class="intro__content">
+      <p class="section-label">{{ 'home.introLabel' | t }}</p>
+      <h2 class="intro__title">{{ 'home.introTitle' | t }}</h2>
+      <p class="intro__body">{{ 'home.introBody' | t }}</p>
+      <div class="intro__meta">
+        <span class="intro__location">{{ 'home.introLocation' | t }}</span>
+        <a routerLink="/about" class="intro__link">{{ 'home.introAbout' | t }}</a>
+      </div>
+    </div>
+    <div class="intro__pillars">
+      @for (pillar of introPillars; track pillar.titleKey) {
+        <article class="intro-pillar" [attr.data-tone]="pillar.tone">
+          <span class="intro-pillar__index">{{ pillar.index }}</span>
+          <h3>{{ pillar.titleKey | t }}</h3>
+          <p>{{ pillar.bodyKey | t }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="section-label">{{ 'home.productsLabel' | t }}</p>
+        <h2 class="section-title">{{ 'home.productsTitle' | t }}</h2>
+        <p class="section-lead">{{ 'home.productsLead' | t }}</p>
+      </div>
+      <a routerLink="/products" class="btn btn-ghost">{{ 'common.viewAllProducts' | t }}</a>
+    </div>
+    <div class="featured-grid">
+      @for (product of products; track product.id; let i = $index) {
+        <div class="featured-grid__item" [class.is-primary]="i === 0">
+          <app-product-card [product]="product" [featured]="i === 0" />
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section-label">{{ 'home.teamLabel' | t }}</p>
+    <h2 class="section-title">{{ 'home.teamTitle' | t }}</h2>
+    <p class="section-lead">{{ 'home.teamLead' | t }}</p>
+    <div class="team-grid">
+      @for (member of team; track member.id) {
+        <app-team-card [member]="member" />
+      }
+    </div>
+  </div>
+</section>
+
+<section class="section services-preview">
+  <div class="container">
+    <p class="section-label">{{ 'home.servicesLabel' | t }}</p>
+    <h2 class="section-title">{{ 'home.servicesTitle' | t }}</h2>
+    <p class="section-lead">{{ 'home.servicesLead' | t }}</p>
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <article class="service-card surface-card" [class.is-featured]="service.featured">
+          <h3>{{ service.titleKey | t }}</h3>
+          <p>{{ service.summaryKey | t }}</p>
+        </article>
+      }
+    </div>
+    <a routerLink="/services" class="btn btn-secondary services-preview__cta">
+      {{ 'common.learnMore' | t }}
+    </a>
+  </div>
+</section>
+
+<section class="section support-band">
+  <div class="container support-band__panel">
+    <div>
+      <p class="section-label">{{ 'home.supportLabel' | t }}</p>
+      <h2 class="section-title">{{ 'home.supportTitle' | t }}</h2>
+      <p class="section-lead">{{ 'home.supportBody' | t }}</p>
+    </div>
+    <ul>
+      @for (point of supportPoints; track point) {
+        <li>{{ point | t }}</li>
+      }
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <p class="section-label">{{ 'home.approachLabel' | t }}</p>
+    <h2 class="section-title">{{ 'home.approachTitle' | t }}</h2>
+    <p class="section-lead">{{ 'home.approachLead' | t }}</p>
+    <div class="approach-wrap">
+      <app-process-steps />
+    </div>
+  </div>
+</section>
+
+<app-section-cta titleKey="home.ctaTitle" bodyKey="home.ctaBody" />

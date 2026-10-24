@@ -1,0 +1,9 @@
+<article class="team-card surface-card">
+  <div class="avatar" aria-hidden="true">{{ member().initials }}</div>
+  <div>
+    <h3>{{ member().name }}</h3>
+    <p class="role">{{ member().titleKey | t }}</p>
+    <a class="ltr-keep" [href]="mailHref()">{{ member().email }}</a>
+    <a class="ltr-keep" [href]="phoneHref()">{{ member().phone }}</a>
+  </div>
+</article>

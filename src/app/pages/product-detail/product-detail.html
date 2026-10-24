@@ -1,0 +1,65 @@
+@if (product(); as item) {
+  <section class="section product-detail" [class]="layoutClass()">
+    <div class="container">
+      <a routerLink="/products" class="back-link">{{ 'common.backToProducts' | t }}</a>
+
+      <div class="hero-panel surface-card">
+        <div class="hero-panel__copy">
+          <div class="title-row">
+            <h1>{{ item.nameKey | t }}</h1>
+            @if (item.status === 'concept') {
+              <span class="badge">{{ 'common.concept' | t }}</span>
+            }
+          </div>
+          <p class="tagline">{{ item.taglineKey | t }}</p>
+          <p class="description">{{ item.descriptionKey | t }}</p>
+          <a routerLink="/contact" class="btn btn-primary">{{ item.ctaKey | t }}</a>
+        </div>
+        <div class="hero-panel__visual">
+          <app-product-visual
+            [image]="item.image"
+            [name]="item.name"
+            [accent]="item.accent"
+          />
+        </div>
+      </div>
+
+      <div class="content-grid">
+        <article class="surface-card block">
+          <h2>{{ 'productsPage.label' | t }}</h2>
+          <p>{{ item.problemKey | t }}</p>
+        </article>
+
+        <article class="surface-card block">
+          <h2>{{ 'common.learnMore' | t }}</h2>
+          <ul class="focus-list">
+            @for (focus of item.focusKeys; track focus) {
+              <li>{{ focus | t }}</li>
+            }
+          </ul>
+        </article>
+      </div>
+
+      <article class="capabilities surface-card">
+        <h2>{{ item.nameKey | t }}</h2>
+        <div class="capabilities__grid">
+          @for (capability of item.capabilityKeys; track capability) {
+            <div class="capability">
+              <p>{{ capability | t }}</p>
+            </div>
+          }
+        </div>
+        <a routerLink="/contact" class="btn btn-secondary">{{ 'common.discussProject' | t }}</a>
+      </article>
+
+      <div class="related">
+        <h2>{{ 'common.otherProducts' | t }}</h2>
+        <div class="related__grid">
+          @for (relatedProduct of related(); track relatedProduct.id) {
+            <app-product-card [product]="relatedProduct" />
+          }
+        </div>
+      </div>
+    </div>
+  </section>
+}

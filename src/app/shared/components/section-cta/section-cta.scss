@@ -1,0 +1,41 @@
+.section-cta {
+  padding-block: clamp(2.5rem, 5vw, 4rem);
+}
+
+.section-cta__panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 2.4rem);
+  background:
+    radial-gradient(circle at top right, rgba(59, 158, 255, 0.18), transparent 40%),
+    linear-gradient(180deg, rgba(16, 26, 44, 0.98), rgba(9, 14, 24, 0.98));
+}
+
+.section-cta h2 {
+  margin: 0 0 0.65rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.section-cta p {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--text-secondary);
+}
+
+.section-cta__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 800px) {
+  .section-cta__panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

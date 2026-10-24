@@ -1,0 +1,58 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <div class="site-footer__brand">
+      <a routerLink="/" class="brand-row">
+        <img src="/assets/images/logo.jpg" width="40" height="40" alt="Alfatih Tech Solutions" />
+        <strong>{{ 'brand.name' | t }}</strong>
+      </a>
+      <p>{{ 'footer.description' | t }}</p>
+      <button type="button" class="lang-link" (click)="switchLanguage()">
+        {{ languageLabel() }}
+      </button>
+    </div>
+
+    <div>
+      <h2>{{ 'footer.products' | t }}</h2>
+      <ul>
+        @for (product of products; track product.id) {
+          <li>
+            <a [routerLink]="['/products', product.slug]">{{ product.nameKey | t }}</a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h2>{{ 'footer.services' | t }}</h2>
+      <ul>
+        @for (service of services; track service.id) {
+          <li>
+            <a routerLink="/services" [fragment]="service.id">{{ service.titleKey | t }}</a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h2>{{ 'footer.contact' | t }}</h2>
+      <ul class="contact-list">
+        <li>
+          <a class="ltr-keep" [href]="mailHref">{{ contact.email }}</a>
+        </li>
+        <li>
+          <a class="ltr-keep" [href]="phoneHref">{{ contact.phone }}</a>
+        </li>
+        <li>{{ contact.locationKey | t }}</li>
+        <li>
+          <a class="ltr-keep" [href]="contact.website" rel="noopener" target="_blank">
+            alfatih-tech.com
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container site-footer__bottom">
+    <span>© {{ year }} {{ 'brand.name' | t }}. {{ 'footer.rights' | t }}</span>
+  </div>
+</footer>

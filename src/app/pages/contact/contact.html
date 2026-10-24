@@ -1,0 +1,85 @@
+<section class="section">
+  <div class="container contact-layout">
+    <div>
+      <p class="section-label">{{ 'contactPage.label' | t }}</p>
+      <h1 class="section-title">{{ 'contactPage.title' | t }}</h1>
+      <p class="section-lead">{{ 'contactPage.lead' | t }}</p>
+
+      <div class="details surface-card">
+        <h2>{{ 'contactPage.detailsTitle' | t }}</h2>
+        <ul>
+          <li>
+            <span>{{ 'contact.emailLabel' | t }}</span>
+            <a class="ltr-keep" [href]="mailHref">{{ contact.email }}</a>
+          </li>
+          <li>
+            <span>{{ 'contact.phoneLabel' | t }}</span>
+            <a class="ltr-keep" [href]="phoneHref">{{ contact.phone }}</a>
+          </li>
+          <li>
+            <span>{{ 'footer.location' | t }}</span>
+            <strong>{{ contact.locationKey | t }}</strong>
+          </li>
+          <li>
+            <span>{{ 'contact.websiteLabel' | t }}</span>
+            <a class="ltr-keep" [href]="contact.website" target="_blank" rel="noopener">
+              alfatih-tech.com
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <form class="form surface-card" [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <h2>{{ 'contactPage.formTitle' | t }}</h2>
+
+      <label>
+        <span>{{ 'contact.name' | t }}</span>
+        <input type="text" formControlName="name" autocomplete="name" />
+        @if (form.controls.name.invalid && (form.controls.name.touched || submittedAttempt())) {
+          <em>{{ 'contact.required' | t }}</em>
+        }
+      </label>
+
+      <label>
+        <span>{{ 'contact.company' | t }} ({{ 'common.optional' | t }})</span>
+        <input type="text" formControlName="company" autocomplete="organization" />
+      </label>
+
+      <label>
+        <span>{{ 'contact.email' | t }}</span>
+        <input type="email" formControlName="email" class="ltr-keep" autocomplete="email" />
+        @if (form.controls.email.invalid && (form.controls.email.touched || submittedAttempt())) {
+          <em>{{ 'contact.invalidEmail' | t }}</em>
+        }
+      </label>
+
+      <label>
+        <span>{{ 'contact.inquiryType' | t }}</span>
+        <select formControlName="inquiryType">
+          <option value="">{{ 'contact.selectInquiry' | t }}</option>
+          @for (option of inquiryOptions; track option.value) {
+            <option [value]="option.value">{{ option.labelKey | t }}</option>
+          }
+        </select>
+        @if (
+          form.controls.inquiryType.invalid &&
+          (form.controls.inquiryType.touched || submittedAttempt())
+        ) {
+          <em>{{ 'contact.required' | t }}</em>
+        }
+      </label>
+
+      <label>
+        <span>{{ 'contact.message' | t }}</span>
+        <textarea formControlName="message" rows="6"></textarea>
+        @if (form.controls.message.invalid && (form.controls.message.touched || submittedAttempt())) {
+          <em>{{ 'contact.required' | t }}</em>
+        }
+      </label>
+
+      <p class="fallback-note">{{ 'contactPage.fallbackNote' | t }}</p>
+      <button type="submit" class="btn btn-primary">{{ 'contact.submit' | t }}</button>
+    </form>
+  </div>
+</section>

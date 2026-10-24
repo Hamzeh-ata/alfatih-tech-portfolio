@@ -1,0 +1,59 @@
+<header class="site-header" [class.is-scrolled]="scrolled()" [class.is-open]="menuOpen()">
+  <div class="container site-header__inner">
+    <a routerLink="/" class="brand" (click)="closeMenu()">
+      <img
+        src="/assets/images/logo.jpg"
+        width="44"
+        height="44"
+        alt="Alfatih Tech Solutions"
+        class="brand__logo"
+      />
+      <span class="brand__text">
+        <span class="brand__name">{{ 'brand.short' | t }}</span>
+        <span class="brand__sub">{{ 'brand.suffix' | t }}</span>
+      </span>
+    </a>
+
+    <nav class="nav" [class.is-open]="menuOpen()" [attr.aria-label]="'nav.home' | t">
+      @for (link of links; track link.path) {
+        <a
+          [routerLink]="link.path"
+          routerLinkActive="is-active"
+          [routerLinkActiveOptions]="{ exact: link.exact }"
+          class="nav__link"
+          (click)="closeMenu()"
+        >
+          {{ link.labelKey | t }}
+        </a>
+      }
+      <a routerLink="/contact" class="btn btn-primary nav__cta" (click)="closeMenu()">
+        {{ 'nav.cta' | t }}
+      </a>
+    </nav>
+
+    <div class="actions">
+      <button
+        type="button"
+        class="lang-switch"
+        (click)="switchLanguage()"
+        [attr.aria-label]="'nav.language' | t"
+      >
+        {{ languageLabel() }}
+      </button>
+      <a routerLink="/contact" class="btn btn-primary actions__cta" (click)="closeMenu()">
+        {{ 'nav.cta' | t }}
+      </a>
+      <button
+        type="button"
+        class="menu-toggle"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="(menuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | t"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

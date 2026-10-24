@@ -1,0 +1,17 @@
+<div
+  class="visual"
+  [class.is-compact]="compact()"
+  [style.--product-accent]="accent()"
+>
+  @if (showNote()) {
+    <span class="visual__note">{{ 'common.visualNote' | t }}</span>
+  }
+  <img
+    class="visual__image"
+    [src]="image()"
+    [alt]="name()"
+    loading="lazy"
+    width="960"
+    height="540"
+  />
+</div>

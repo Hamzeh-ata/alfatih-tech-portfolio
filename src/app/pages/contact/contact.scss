@@ -1,0 +1,92 @@
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.details,
+.form {
+  padding: 1.4rem;
+}
+
+.details h2,
+.form h2 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+}
+
+.details ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.details li {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.details span {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.details a,
+.details strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.form {
+  display: grid;
+  gap: 0.95rem;
+}
+
+label {
+  display: grid;
+  gap: 0.4rem;
+}
+
+label span {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.8rem 0.9rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--border-strong);
+}
+
+em {
+  color: var(--danger);
+  font-style: normal;
+  font-size: 0.82rem;
+}
+
+.fallback-note {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.88rem;
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}

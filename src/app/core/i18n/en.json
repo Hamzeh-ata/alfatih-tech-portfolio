@@ -1,0 +1,423 @@
+{
+  "brand": {
+    "name": "Alfatih Tech Solutions",
+    "short": "Alfatih",
+    "suffix": "Tech Solutions"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Discuss Your Project",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "languageEn": "EN",
+    "languageAr": "AR"
+  },
+  "footer": {
+    "description": "A technology company building digital products, custom software, post-launch support, and growth-focused marketing for businesses.",
+    "products": "Products",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "location": "Khalda, Amman, Jordan"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "viewProduct": "View product",
+    "viewAllProducts": "View all products",
+    "backToProducts": "Back to products",
+    "exploreProducts": "Explore Our Products",
+    "discussProject": "Discuss Your Project",
+    "contactUs": "Contact us",
+    "concept": "Concept",
+    "visualNote": "Visual representation",
+    "otherProducts": "Other products",
+    "optional": "optional",
+    "skipToContent": "Skip to content"
+  },
+  "home": {
+    "seoTitle": "Technology Company in Amman",
+    "seoDescription": "Alfatih Tech Solutions builds digital products, custom software, post-launch support, and digital marketing for businesses in Jordan and beyond.",
+    "heroLabel": "Alfatih Tech Solutions",
+    "heroTitle": "Building Digital Products. Creating Technology Solutions. Supporting Growth.",
+    "heroDescription": "From our own digital products to custom software solutions, ongoing technical support, and digital marketing, we help businesses turn ideas into practical digital experiences and continue improving them over time.",
+    "introLabel": "Who we are",
+    "introTitle": "A technology partner for products, software, and growth",
+    "introBody": "Alfatih Tech Solutions is a technology company based in Khalda, Amman, Jordan. We build and operate our own digital products, develop custom software for individuals, startups, and businesses, and stay involved after launch with maintenance, improvements, and growth support.",
+    "introLocation": "Based in Khalda, Amman, Jordan",
+    "introAbout": "About the company",
+    "introPillars": {
+      "productsTitle": "Digital products",
+      "productsBody": "We build and operate our own platforms with clear product purpose.",
+      "softwareTitle": "Custom software",
+      "softwareBody": "We design and develop tailored systems for startups and businesses.",
+      "growthTitle": "Support and growth",
+      "growthBody": "We stay involved after launch with maintenance, improvements, and marketing support."
+    },
+    "productsLabel": "Featured products",
+    "productsTitle": "Digital products built with clear purpose",
+    "productsLead": "Explore the platforms and tools we build, starting with Postlane and continuing through our wider product portfolio.",
+    "servicesLabel": "What we offer",
+    "servicesTitle": "Capabilities that cover the full product lifecycle",
+    "servicesLead": "From first idea to ongoing improvement, we help businesses plan, build, launch, and grow digital solutions.",
+    "supportLabel": "After launch",
+    "supportTitle": "Launch is only the beginning",
+    "supportBody": "Software needs a reliable partner after go-live. We help keep systems stable, resolve issues, improve performance, and develop new capabilities as business needs change—according to the agreed scope of each engagement.",
+    "supportPoints": {
+      "maintenance": "Ongoing technical maintenance",
+      "fixes": "Bug fixes and troubleshooting",
+      "performance": "Performance improvements",
+      "features": "New features and enhancements"
+    },
+    "approachLabel": "How we work",
+    "approachTitle": "A clear process from discovery to continuous improvement",
+    "approachLead": "We keep the journey understandable for non-technical stakeholders while staying precise about scope, priorities, and delivery.",
+    "teamLabel": "Our team",
+    "teamTitle": "The people behind Alfatih Tech Solutions",
+    "teamLead": "A focused company team covering leadership, technology, and growth.",
+    "ctaTitle": "Ready to discuss your next digital step?",
+    "ctaBody": "Tell us about your product idea, software needs, or growth challenge. We will explore the requirements and discuss how we can help."
+  },
+  "productsPage": {
+    "seoTitle": "Our Products",
+    "seoDescription": "Explore the digital products built by Alfatih Tech Solutions, including Postlane, InkPlay, Dokkan Style, Point-of-Sale, Inkverse, SchoolWatch, GymWatch, SiteProof, AqarPay, and Sendly.",
+    "label": "Product portfolio",
+    "title": "Products built to solve real operational needs",
+    "lead": "Each product stands on its own with a clear purpose, focused experience, and room to evolve with the businesses that use it."
+  },
+  "servicesPage": {
+    "seoTitle": "Services",
+    "seoDescription": "Custom software development, digital product development, post-launch support, and digital marketing services from Alfatih Tech Solutions.",
+    "label": "Services",
+    "title": "Practical technology and growth services",
+    "lead": "We explain our capabilities in clear language so decision-makers can understand what we deliver and how we can support their business.",
+    "supportNote": "Support services are provided according to the agreed scope of each engagement. We do not imply guaranteed uptime or continuous 24/7 coverage unless explicitly contracted.",
+    "marketingNote": "Marketing work focuses on strategy, positioning, and acquisition planning. We do not claim guaranteed leads, sales, or campaign results."
+  },
+  "aboutPage": {
+    "seoTitle": "About Us",
+    "seoDescription": "Learn about Alfatih Tech Solutions, a technology company in Khalda, Amman, Jordan building products, custom software, and growth services.",
+    "label": "About us",
+    "title": "Technology with purpose, built in Amman",
+    "body": "Alfatih Tech Solutions is a technology company based in Khalda, Amman, Jordan. We build our own digital products, develop custom software solutions, and help businesses improve and grow through technology and marketing.",
+    "valuesTitle": "What guides our work",
+    "valueClarityTitle": "Clarity",
+    "valueClarityBody": "We communicate in practical language so stakeholders understand scope, progress, and decisions.",
+    "valueCraftTitle": "Craft",
+    "valueCraftBody": "We care about usable interfaces, maintainable systems, and solutions that fit real operations.",
+    "valueContinuityTitle": "Continuity",
+    "valueContinuityBody": "We stay engaged after launch to help products remain useful, stable, and ready to grow.",
+    "teamTitle": "Leadership team",
+    "teamLead": "Meet the people leading product, technology, and growth at Alfatih Tech Solutions."
+  },
+  "contactPage": {
+    "seoTitle": "Contact",
+    "seoDescription": "Contact Alfatih Tech Solutions in Khalda, Amman, Jordan to discuss custom software, products, support, or digital marketing.",
+    "label": "Contact",
+    "title": "Let's Build Something Valuable.",
+    "lead": "Tell us about your business, your idea, or the challenge you want to solve. We'll explore the requirements and discuss how we can help.",
+    "formTitle": "Send an inquiry",
+    "detailsTitle": "Direct contact",
+    "fallbackNote": "Submitting the form opens your email client with a prepared message. No fake confirmation is shown."
+  },
+  "contact": {
+    "name": "Name",
+    "company": "Business or company name",
+    "email": "Email",
+    "inquiryType": "Inquiry type",
+    "message": "Project or inquiry description",
+    "submit": "Send inquiry",
+    "location": "Khalda, Amman, Jordan",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "websiteLabel": "Website",
+    "required": "This field is required",
+    "invalidEmail": "Enter a valid email address",
+    "selectInquiry": "Select an inquiry type",
+    "inquiry": {
+      "custom": "Custom software development",
+      "product": "Existing product inquiry",
+      "support": "Post-launch support",
+      "marketing": "Digital marketing",
+      "partnership": "Partnership",
+      "other": "Other"
+    }
+  },
+  "services": {
+    "custom": {
+      "title": "Custom Software Development",
+      "summary": "We develop tailored web applications, business management systems, customer portals, workflow tools, and integrations based on business requirements.",
+      "points": {
+        "web": "Tailored web applications",
+        "systems": "Business management systems",
+        "portals": "Customer and partner portals",
+        "workflows": "Internal workflow tools",
+        "integrations": "System and API integrations"
+      }
+    },
+    "product": {
+      "title": "Digital Product Development",
+      "summary": "We help transform ideas into digital products through planning, product design, development, testing, and deployment.",
+      "points": {
+        "planning": "Product planning and scoping",
+        "design": "Product and interface design",
+        "development": "Application development",
+        "testing": "Testing and quality checks",
+        "deployment": "Deployment preparation and release"
+      }
+    },
+    "support": {
+      "title": "Post-Launch Support and Product Growth",
+      "summary": "Launching software is only one part of its lifecycle. Businesses often need a technology partner to keep systems reliable, resolve issues, improve performance, and develop new capabilities as needs change.",
+      "points": {
+        "maintenance": "Ongoing technical maintenance",
+        "bugs": "Bug fixes and troubleshooting",
+        "performance": "Performance improvements",
+        "security": "Security updates and dependency maintenance",
+        "features": "New features and enhancements",
+        "uiux": "UI and UX improvements",
+        "api": "API and third-party integrations",
+        "deployment": "Deployment and operational support",
+        "scale": "Scalability and technical planning"
+      }
+    },
+    "marketing": {
+      "title": "Digital Marketing and Growth",
+      "summary": "We help businesses strengthen positioning, improve digital presence, and plan practical paths for lead generation and customer acquisition.",
+      "points": {
+        "strategy": "Marketing strategy and planning",
+        "positioning": "Brand positioning and messaging",
+        "presence": "Digital presence development",
+        "campaigns": "Campaign planning",
+        "leads": "Lead generation and outreach strategy",
+        "acquisition": "Customer acquisition planning"
+      }
+    }
+  },
+  "process": {
+    "discover": {
+      "title": "Discover",
+      "description": "Understand the business, goals, users, and problems before proposing a solution."
+    },
+    "plan": {
+      "title": "Plan",
+      "description": "Define requirements, scope, priorities, and the proposed approach with clear outcomes."
+    },
+    "build": {
+      "title": "Build",
+      "description": "Design, develop, test, and prepare the solution for real operational use."
+    },
+    "launch": {
+      "title": "Launch",
+      "description": "Deploy the product and help prepare teams and processes for go-live."
+    },
+    "improve": {
+      "title": "Improve",
+      "description": "Maintain, optimize, and expand the solution as business needs evolve."
+    }
+  },
+  "team": {
+    "hamzeh": {
+      "title": "Founder & Chief Executive Officer"
+    },
+    "rakan": {
+      "title": "Chief Technology Officer"
+    },
+    "raed": {
+      "title": "Head of Marketing & Growth"
+    }
+  },
+  "products": {
+    "postlane": {
+      "name": "Postlane",
+      "tagline": "Local-first marketing workspace for freelancers, agencies, and small teams",
+      "description": "A local marketing workspace that brings together brand management, Instagram content creation, lead research, email outreach, and team collaboration in one place—with clear permissions so teams can work safely.",
+      "problem": "Freelancers, agencies, and small teams often juggle disconnected tools for content, outreach, leads, and delivery, while needing clear permissions and human control over publishing and sending.",
+      "focus": {
+        "local": "Local-first workspace on your computer",
+        "instagram": "Instagram content creation, review, and publishing",
+        "leads": "Map-based lead research for local businesses",
+        "email": "Email campaigns through your own SMTP accounts",
+        "permissions": "Workspace separation and role-based access"
+      },
+      "capabilities": {
+        "studio": "Post Studio for creating, approving, scheduling, and publishing Instagram posts",
+        "campaigns": "Email campaigns with templates, projects, recipient tracking, and team sending accounts",
+        "research": "Lead Research / Map Researcher to find and qualify local business prospects",
+        "workspaces": "Personal and company workspaces with brand briefs and controlled team access",
+        "planned": "Planned modules: Client Portal & Reporting, and Agency Workload & Profitability"
+      },
+      "cta": "Discuss Postlane for your team"
+    },
+    "inkplay": {
+      "name": "InkPlay",
+      "tagline": "Connected operations for gaming venues",
+      "description": "A connected platform for gaming venues that brings operations, player access, displays, promotions, and business visibility together.",
+      "problem": "Gaming venues need a connected way to manage operations, player access, on-site displays, and promotional visibility without fragmented tools.",
+      "focus": {
+        "operations": "Venue operations",
+        "player": "Player experience",
+        "displays": "Connected displays",
+        "promotions": "Promotions and business visibility"
+      },
+      "capabilities": {
+        "venue": "Operational coordination across venue activities",
+        "access": "Player access and on-site experience support",
+        "visibility": "Display and promotion visibility for the business"
+      },
+      "cta": "Ask about InkPlay"
+    },
+    "dokkan": {
+      "name": "Dokkan Style",
+      "tagline": "A focused modern digital product experience",
+      "description": "A focused digital experience built around a clear product identity, fast interaction, and a modern web interface.",
+      "problem": "Some digital products need a sharp identity and a fast web experience that feels intentional rather than generic.",
+      "focus": {
+        "identity": "Product identity",
+        "interaction": "Digital interaction",
+        "web": "Modern web experience"
+      },
+      "capabilities": {
+        "experience": "A product-centered digital experience",
+        "interface": "Fast, modern web interaction patterns",
+        "brand": "A clear visual and product identity"
+      },
+      "cta": "Learn more about Dokkan Style"
+    },
+    "pos": {
+      "name": "Point-of-Sale System",
+      "tagline": "Practical sales workflows for daily operations",
+      "description": "A practical point-of-sale system built to support daily business operations with fast, straightforward workflows.",
+      "problem": "Retail and service teams need a clear sales screen and operational dashboard that keep everyday transactions simple.",
+      "focus": {
+        "sales": "Sales workflows",
+        "transactions": "Transaction management",
+        "dashboards": "Operational dashboards"
+      },
+      "capabilities": {
+        "workflows": "Fast sales workflows for day-to-day use",
+        "transactions": "Straightforward transaction handling",
+        "operations": "Operational visibility through practical dashboards"
+      },
+      "cta": "Discuss the POS system"
+    },
+    "inkverse": {
+      "name": "Inkverse",
+      "tagline": "Content discovery and community interaction",
+      "description": "A digital platform experience centered on content discovery, community interaction, and a scalable product journey.",
+      "problem": "Content-driven platforms need a clear path for discovery, interaction, and growth without losing product focus.",
+      "focus": {
+        "discovery": "Content discovery",
+        "community": "Community interaction",
+        "scale": "Scalable digital experiences"
+      },
+      "capabilities": {
+        "content": "Discovery-oriented content experiences",
+        "interaction": "Community-centered interaction flows",
+        "journey": "A product journey designed to scale"
+      },
+      "cta": "Explore Inkverse"
+    },
+    "schoolwatch": {
+      "name": "SchoolWatch",
+      "tagline": "School operations and parent communication",
+      "description": "A school management and parent communication platform designed to help schools organize their daily operations, monitor student follow-up, manage administrative processes, and maintain communication with parents.",
+      "problem": "Schools need a practical digital system to coordinate administration, student follow-up, fees, and parent communication in one place.",
+      "focus": {
+        "admin": "School administration",
+        "attendance": "Attendance and student follow-up",
+        "fees": "Fee management",
+        "parents": "Parent communication"
+      },
+      "capabilities": {
+        "operations": "Daily school administration support",
+        "followup": "Student follow-up and attendance visibility",
+        "communication": "Structured communication with parents"
+      },
+      "cta": "Talk about SchoolWatch"
+    },
+    "gymwatch": {
+      "name": "GymWatch",
+      "tagline": "Membership, attendance, training, and gym operations in one platform",
+      "description": "A gym management platform for multi-branch operations, membership subscriptions, attendance and live occupancy, group classes, private trainer sessions, workout programs, diet plans, equipment maintenance, partner matching, and wearable health monitoring.",
+      "problem": "Gyms need one connected system for memberships, branch operations, check-in eligibility, classes, training delivery, equipment, and member engagement across web and mobile.",
+      "focus": {
+        "memberships": "Membership plans and subscriptions",
+        "operations": "Member and multi-branch gym operations",
+        "attendance": "Attendance and live occupancy",
+        "classes": "Group classes and private trainer sessions",
+        "training": "Workout programs, diet plans, and equipment"
+      },
+      "capabilities": {
+        "subscriptions": "Plans, renewals, freezes, payments, invoices, and membership cards",
+        "branches": "Multi-gym memberships, staff roles, trainers, and operational reports",
+        "occupancy": "Eligibility-based check-in with live occupancy and capacity visibility",
+        "classes": "Class schedules, bookings, waitlists, and private trainer availability",
+        "programs": "Training schedules, diet plan assignments, and workout logging",
+        "equipment": "Equipment catalog, QR access, issue reporting, and maintenance workflows",
+        "partner": "Gym Partner matching for workout buddies with moderation and chat",
+        "wearables": "Optional wearable monitoring during check-in for members, staff, and trainers"
+      },
+      "cta": "Discuss GymWatch"
+    },
+    "siteproof": {
+      "name": "SiteProof",
+      "tagline": "Quality control and client reporting for facilities teams",
+      "description": "A digital quality-control and client-reporting platform for commercial cleaning and facilities management companies.",
+      "problem": "Facilities teams need a practical way to run inspections, capture evidence, track issues, and share service-quality visibility with clients.",
+      "focus": {
+        "inspections": "Site inspections",
+        "checklists": "Digital checklists",
+        "photos": "Photo evidence",
+        "issues": "Issue tracking and corrective actions",
+        "reporting": "Client reporting and service-quality visibility"
+      },
+      "capabilities": {
+        "quality": "Structured quality-control workflows for site teams",
+        "evidence": "Checklist and photo evidence capture",
+        "visibility": "Clearer reporting for clients and operators"
+      },
+      "cta": "Ask about SiteProof"
+    },
+    "aqarpay": {
+      "name": "AqarPay",
+      "tagline": "Property and rental management platform",
+      "description": "A property and rental management platform designed to simplify apartment management, tenant records, payment tracking, outstanding balances, and maintenance workflows.",
+      "problem": "Property operators need a clearer way to manage tenants, payments, balances, and maintenance across apartments.",
+      "focus": {
+        "rental": "Rental management",
+        "tenants": "Tenant records",
+        "payments": "Payment tracking",
+        "maintenance": "Maintenance workflows"
+      },
+      "capabilities": {
+        "apartments": "Apartment and rental record organization",
+        "balances": "Payment and outstanding balance tracking",
+        "workflows": "Maintenance workflow support"
+      },
+      "cta": "Discuss AqarPay"
+    },
+    "sendly": {
+      "name": "Sendly",
+      "tagline": "Streamlined email communication and outreach workflows",
+      "description": "A communication and outreach solution focused on simplifying email-based communication and helping businesses manage their messaging workflows.",
+      "problem": "Businesses often struggle to keep email outreach organized, consistent, and easy to manage across teams and campaigns.",
+      "focus": {
+        "email": "Email communication",
+        "outreach": "Outreach workflows",
+        "messaging": "Business messaging"
+      },
+      "capabilities": {
+        "workflows": "Structured messaging workflows for business communication",
+        "communication": "Clearer email-based outreach and follow-up handling",
+        "organization": "A focused interface for managing communication activity"
+      },
+      "cta": "Discuss Sendly for your business"
+    }
+  }
+}
