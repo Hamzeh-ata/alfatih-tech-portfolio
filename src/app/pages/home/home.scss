@@ -99,10 +99,18 @@
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
 }
-.intro .btn-ghost {
-  margin-top: 1rem;
+.intro__link {
+  margin-top: 1.5rem;
   color: var(--on-dark);
   border-color: var(--on-dark-border);
+}
+.intro__link:hover {
+  color: var(--navy);
+  background: var(--on-dark);
+  border-color: var(--on-dark);
+}
+.intro__link:focus-visible {
+  outline-color: var(--art-light);
 }
 .intro__pillars {
   display: grid;
