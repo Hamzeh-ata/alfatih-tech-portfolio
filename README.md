@@ -24,7 +24,7 @@ npm run build
 
 ## Contact form
 
-The contact form validates input, then opens the visitor’s email client with a prepared `mailto:` message to `hamzeh@alfatih-tech.com`. It does not fake a successful server submission.
+The contact form validates input, then opens the visitor’s email client with a prepared `mailto:` message to `sales@alfatih-tech.com`. It does not fake a successful server submission.
 
 To connect a backend later, replace the `submit()` method in `src/app/pages/contact/contact.ts` with an API call while keeping the same validation.
 
@@ -33,7 +33,7 @@ To connect a backend later, replace the `submit()` method in `src/app/pages/cont
 1. Postlane  
 2. InkPlay  
 3. Dokkan Style  
-4. Point-of-Sale System  
+4. AlfatihPOS
 5. Inkverse  
 6. SchoolWatch  
 7. GymWatch  
@@ -41,4 +41,4 @@ To connect a backend later, replace the `submit()` method in `src/app/pages/cont
 9. AqarPay  
 10. Sendly  
 
-Dokkan Style and the Point-of-Sale System are separate products with separate routes. Client Portal and Agency Workload & Profitability are described as planned Postlane modules.
+Dokkan Style and AlfatihPOS are separate products with separate routes. Client Portal and Agency Workload & Profitability are described as planned Postlane modules.

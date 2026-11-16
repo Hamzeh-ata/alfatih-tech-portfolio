@@ -1,4 +1,9 @@
-<header class="site-header" [class.is-scrolled]="scrolled()" [class.is-open]="menuOpen()">
+<header
+  class="site-header"
+  [class.is-scrolled]="scrolled()"
+  [class.is-open]="menuOpen()"
+  (keydown.escape)="closeMenu(); menuToggle.focus()"
+>
   <div class="container site-header__inner">
     <a routerLink="/" class="brand" (click)="closeMenu()">
       <img
@@ -14,11 +19,17 @@
       </span>
     </a>
 
-    <nav class="nav" [class.is-open]="menuOpen()" [attr.aria-label]="'nav.home' | t">
+    <nav
+      id="site-navigation"
+      class="nav"
+      [class.is-open]="menuOpen()"
+      [attr.aria-label]="'nav.mainNavigation' | t"
+    >
       @for (link of links; track link.path) {
         <a
           [routerLink]="link.path"
           routerLinkActive="is-active"
+          ariaCurrentWhenActive="page"
           [routerLinkActiveOptions]="{ exact: link.exact }"
           class="nav__link"
           (click)="closeMenu()"
@@ -46,6 +57,8 @@
       <button
         type="button"
         class="menu-toggle"
+        #menuToggle
+        aria-controls="site-navigation"
         (click)="toggleMenu()"
         [attr.aria-expanded]="menuOpen()"
         [attr.aria-label]="(menuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | t"

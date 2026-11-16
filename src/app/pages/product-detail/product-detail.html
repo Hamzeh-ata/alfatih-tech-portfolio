@@ -16,22 +16,18 @@
           <a routerLink="/contact" class="btn btn-primary">{{ item.ctaKey | t }}</a>
         </div>
         <div class="hero-panel__visual">
-          <app-product-visual
-            [image]="item.image"
-            [name]="item.name"
-            [accent]="item.accent"
-          />
+          <app-product-visual [image]="item.image" [name]="item.name" [accent]="item.accent" />
         </div>
       </div>
 
       <div class="content-grid">
         <article class="surface-card block">
-          <h2>{{ 'productsPage.label' | t }}</h2>
+          <h2>{{ 'productsPage.problemTitle' | t }}</h2>
           <p>{{ item.problemKey | t }}</p>
         </article>
 
         <article class="surface-card block">
-          <h2>{{ 'common.learnMore' | t }}</h2>
+          <h2>{{ 'productsPage.focusTitle' | t }}</h2>
           <ul class="focus-list">
             @for (focus of item.focusKeys; track focus) {
               <li>{{ focus | t }}</li>
@@ -41,7 +37,7 @@
       </div>
 
       <article class="capabilities surface-card">
-        <h2>{{ item.nameKey | t }}</h2>
+        <h2>{{ 'productsPage.capabilitiesTitle' | t }}</h2>
         <div class="capabilities__grid">
           @for (capability of item.capabilityKeys; track capability) {
             <div class="capability">

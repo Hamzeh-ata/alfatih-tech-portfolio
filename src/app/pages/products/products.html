@@ -1,7 +1,15 @@
 <section class="section">
   <div class="container">
-    <p class="section-label">{{ 'productsPage.label' | t }}</p>
-    <h1 class="section-title">{{ 'productsPage.title' | t }}</h1>
+    <div class="catalogue-header">
+      <div>
+        <p class="section-label">{{ 'productsPage.label' | t }}</p>
+        <h1 class="section-title">{{ 'productsPage.title' | t }}</h1>
+      </div>
+      <div class="catalogue-count">
+        <strong>{{ products.length }}</strong
+        ><span>{{ 'productsPage.countLabel' | t }}</span>
+      </div>
+    </div>
     <p class="section-lead">{{ 'productsPage.lead' | t }}</p>
 
     <div class="products-grid">

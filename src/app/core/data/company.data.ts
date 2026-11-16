@@ -1,8 +1,8 @@
 import { CompanyContact, InquiryOption } from '../models/contact.model';
 
 export const COMPANY_CONTACT: CompanyContact = {
-  email: 'hamzeh@alfatih-tech.com',
-  phone: '+962 7 9835 4093',
+  email: 'sales@alfatih-tech.com',
+  phone: '+962 7 8789 8286',
   locationKey: 'contact.location',
   website: 'https://alfatih-tech.com',
 };

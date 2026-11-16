@@ -1,10 +1,7 @@
-import { Component, OnInit, inject, signal } from '@angular/core';
-import {
-  FormBuilder,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { Component, ElementRef, OnInit, inject, signal } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { COMPANY_CONTACT, INQUIRY_OPTIONS } from '../../core/data/company.data';
+import { CONTACT_INVALID_CONTROL_SELECTOR } from '../../core/data/ui.constants';
 import { LanguageService } from '../../core/services/language.service';
 import { SeoService } from '../../core/services/seo.service';
 import { TranslatePipe } from '../../shared/pipes/translate.pipe';
@@ -19,6 +16,7 @@ export class ContactPage implements OnInit {
   private readonly seo = inject(SeoService);
   private readonly language = inject(LanguageService);
   private readonly fb = inject(FormBuilder);
+  private readonly element = inject<ElementRef<HTMLElement>>(ElementRef);
 
   readonly contact = COMPANY_CONTACT;
   readonly inquiryOptions = INQUIRY_OPTIONS;
@@ -46,6 +44,9 @@ export class ContactPage implements OnInit {
     this.submittedAttempt.set(true);
     if (this.form.invalid) {
       this.form.markAllAsTouched();
+      this.element.nativeElement
+        .querySelector<HTMLElement>(CONTACT_INVALID_CONTROL_SELECTOR)
+        ?.focus();
       return;
     }
 

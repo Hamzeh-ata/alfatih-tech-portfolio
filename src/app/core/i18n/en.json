@@ -10,12 +10,13 @@
     "services": "Services",
     "about": "About",
     "contact": "Contact",
-    "cta": "Discuss Your Project",
+    "cta": "Let's talk",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "language": "Language",
     "languageEn": "EN",
-    "languageAr": "AR"
+    "languageAr": "AR",
+    "mainNavigation": "Main navigation"
   },
   "footer": {
     "description": "A technology company building digital products, custom software, post-launch support, and growth-focused marketing for businesses.",
@@ -31,8 +32,8 @@
     "viewProduct": "View product",
     "viewAllProducts": "View all products",
     "backToProducts": "Back to products",
-    "exploreProducts": "Explore Our Products",
-    "discussProject": "Discuss Your Project",
+    "exploreProducts": "Explore our work",
+    "discussProject": "Let's build something",
     "contactUs": "Contact us",
     "concept": "Concept",
     "visualNote": "Visual representation",
@@ -43,12 +44,12 @@
   "home": {
     "seoTitle": "Technology Company in Amman",
     "seoDescription": "Alfatih Tech Solutions builds digital products, custom software, post-launch support, and digital marketing for businesses in Jordan and beyond.",
-    "heroLabel": "Alfatih Tech Solutions",
-    "heroTitle": "Building Digital Products. Creating Technology Solutions. Supporting Growth.",
-    "heroDescription": "From our own digital products to custom software solutions, ongoing technical support, and digital marketing, we help businesses turn ideas into practical digital experiences and continue improving them over time.",
+    "heroLabel": "Independent minds. Shared ambition.",
+    "heroTitle": "Good ideas.",
+    "heroDescription": "We turn ambitious ideas into thoughtful digital products. From custom software to our own platforms, we build for the way your business works.",
     "introLabel": "Who we are",
-    "introTitle": "A technology partner for products, software, and growth",
-    "introBody": "Alfatih Tech Solutions is a technology company based in Khalda, Amman, Jordan. We build and operate our own digital products, develop custom software for individuals, startups, and businesses, and stay involved after launch with maintenance, improvements, and growth support.",
+    "introTitle": "Your next chapter, built together.",
+    "introBody": "We're Alfatih Tech Solutions, a team of builders based in Amman. We create our own products, develop software around your business, and stay by your side as it grows.",
     "introLocation": "Based in Khalda, Amman, Jordan",
     "introAbout": "About the company",
     "introPillars": {
@@ -59,12 +60,12 @@
       "growthTitle": "Support and growth",
       "growthBody": "We stay involved after launch with maintenance, improvements, and marketing support."
     },
-    "productsLabel": "Featured products",
-    "productsTitle": "Digital products built with clear purpose",
-    "productsLead": "Explore the platforms and tools we build, starting with Postlane and continuing through our wider product portfolio.",
+    "productsLabel": "Selected work",
+    "productsTitle": "Built by us. Made for you.",
+    "productsLead": "Different challenges. Thoughtful solutions. Get to know the products we're building.",
     "servicesLabel": "What we offer",
-    "servicesTitle": "Capabilities that cover the full product lifecycle",
-    "servicesLead": "From first idea to ongoing improvement, we help businesses plan, build, launch, and grow digital solutions.",
+    "servicesTitle": "Good partners. From day one.",
+    "servicesLead": "The thinking, design, and engineering to move your business forward — all under one roof.",
     "supportLabel": "After launch",
     "supportTitle": "Launch is only the beginning",
     "supportBody": "Software needs a reliable partner after go-live. We help keep systems stable, resolve issues, improve performance, and develop new capabilities as business needs change—according to the agreed scope of each engagement.",
@@ -75,27 +76,41 @@
       "features": "New features and enhancements"
     },
     "approachLabel": "How we work",
-    "approachTitle": "A clear process from discovery to continuous improvement",
-    "approachLead": "We keep the journey understandable for non-technical stakeholders while staying precise about scope, priorities, and delivery.",
+    "approachTitle": "A clear path from idea to impact.",
+    "approachLead": "A collaborative process, clear priorities, and progress you can follow. Every step of the way.",
     "teamLabel": "Our team",
-    "teamTitle": "The people behind Alfatih Tech Solutions",
-    "teamLead": "A focused company team covering leadership, technology, and growth.",
-    "ctaTitle": "Ready to discuss your next digital step?",
-    "ctaBody": "Tell us about your product idea, software needs, or growth challenge. We will explore the requirements and discuss how we can help."
+    "teamTitle": "Small team. Shared ambition.",
+    "teamLead": "Meet the people bringing product, technology, and growth together.",
+    "ctaTitle": "Your next big idea starts here.",
+    "ctaBody": "A new product, a better system, or a challenge worth solving. Let's find out what we can build together.",
+    "heroAccent": "Great digital experiences.",
+    "heroLocation": "Based in Amman, Jordan. Building beyond.",
+    "portfolioLabel": "From our product portfolio",
+    "universeLabel": "The Alfatih universe",
+    "universeCore": "Ideas into impact",
+    "universeCount": "one vision",
+    "universeExplore": "Explore the universe",
+    "universePostlane": "Marketing workspace",
+    "universeInkplay": "Gaming venues",
+    "universeSchoolwatch": "School management"
   },
   "productsPage": {
     "seoTitle": "Our Products",
-    "seoDescription": "Explore the digital products built by Alfatih Tech Solutions, including Postlane, InkPlay, Dokkan Style, Point-of-Sale, Inkverse, SchoolWatch, GymWatch, SiteProof, AqarPay, and Sendly.",
+    "seoDescription": "Explore the digital products built by Alfatih Tech Solutions, including Postlane, InkPlay, Dokkan Style, AlfatihPOS, Inkverse, SchoolWatch, GymWatch, SiteProof, AqarPay, and Sendly.",
     "label": "Product portfolio",
-    "title": "Products built to solve real operational needs",
-    "lead": "Each product stands on its own with a clear purpose, focused experience, and room to evolve with the businesses that use it."
+    "title": "Ideas made useful.",
+    "lead": "Explore our family of digital products. Each one built around a real challenge, with its own purpose and personality.",
+    "countLabel": "products",
+    "problemTitle": "The challenge",
+    "focusTitle": "What it brings together",
+    "capabilitiesTitle": "Inside the product"
   },
   "servicesPage": {
     "seoTitle": "Services",
     "seoDescription": "Custom software development, digital product development, post-launch support, and digital marketing services from Alfatih Tech Solutions.",
     "label": "Services",
-    "title": "Practical technology and growth services",
-    "lead": "We explain our capabilities in clear language so decision-makers can understand what we deliver and how we can support their business.",
+    "title": "From the first idea. To what's next.",
+    "lead": "A complete technology partnership: thoughtful software, purposeful products, and support that continues after launch.",
     "supportNote": "Support services are provided according to the agreed scope of each engagement. We do not imply guaranteed uptime or continuous 24/7 coverage unless explicitly contracted.",
     "marketingNote": "Marketing work focuses on strategy, positioning, and acquisition planning. We do not claim guaranteed leads, sales, or campaign results."
   },
@@ -119,11 +134,11 @@
     "seoTitle": "Contact",
     "seoDescription": "Contact Alfatih Tech Solutions in Khalda, Amman, Jordan to discuss custom software, products, support, or digital marketing.",
     "label": "Contact",
-    "title": "Let's Build Something Valuable.",
+    "title": "Let's make something matter.",
     "lead": "Tell us about your business, your idea, or the challenge you want to solve. We'll explore the requirements and discuss how we can help.",
-    "formTitle": "Send an inquiry",
+    "formTitle": "Tell us what you have in mind",
     "detailsTitle": "Direct contact",
-    "fallbackNote": "Submitting the form opens your email client with a prepared message. No fake confirmation is shown."
+    "fallbackNote": "Your email app will open with your inquiry ready to review and send."
   },
   "contact": {
     "name": "Name",
@@ -131,7 +146,7 @@
     "email": "Email",
     "inquiryType": "Inquiry type",
     "message": "Project or inquiry description",
-    "submit": "Send inquiry",
+    "submit": "Prepare my inquiry",
     "location": "Khalda, Amman, Jordan",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
@@ -146,7 +161,12 @@
       "marketing": "Digital marketing",
       "partnership": "Partnership",
       "other": "Other"
-    }
+    },
+    "nameError": "Please enter at least 2 characters.",
+    "messageError": "Tell us a little more — at least 20 characters.",
+    "messageHint": "A brief idea, your goals, or the challenge you're facing. At least 20 characters.",
+    "messagePlaceholder": "What would you like to build or improve?",
+    "locationLabel": "Location"
   },
   "services": {
     "custom": {
@@ -223,13 +243,13 @@
   },
   "team": {
     "hamzeh": {
-      "title": "Founder & Chief Executive Officer"
+      "title": "Co-Founder & Chief Technology Officer"
     },
     "rakan": {
-      "title": "Chief Technology Officer"
+      "title": "Co-Founder & Chief AI Officer"
     },
     "raed": {
-      "title": "Head of Marketing & Growth"
+      "title": "Co-Founder & Chief Executive Officer"
     }
   },
   "products": {
@@ -290,9 +310,9 @@
       "cta": "Learn more about Dokkan Style"
     },
     "pos": {
-      "name": "Point-of-Sale System",
+      "name": "AlfatihPOS",
       "tagline": "Practical sales workflows for daily operations",
-      "description": "A practical point-of-sale system built to support daily business operations with fast, straightforward workflows.",
+      "description": "AlfatihPOS is a practical point-of-sale system built to support daily business operations with fast, straightforward workflows.",
       "problem": "Retail and service teams need a clear sales screen and operational dashboard that keep everyday transactions simple.",
       "focus": {
         "sales": "Sales workflows",
@@ -304,7 +324,7 @@
         "transactions": "Straightforward transaction handling",
         "operations": "Operational visibility through practical dashboards"
       },
-      "cta": "Discuss the POS system"
+      "cta": "Discuss AlfatihPOS"
     },
     "inkverse": {
       "name": "Inkverse",

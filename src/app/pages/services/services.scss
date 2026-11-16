@@ -1,68 +1,73 @@
 .services-list {
-  display: grid;
-  gap: 1.15rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  counter-reset: services;
 }
-
 .service-block {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.25rem;
-  padding: clamp(1.25rem, 3vw, 1.85rem);
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 4rem;
+  padding-block: 3rem;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--border-subtle);
+  border-radius: 0;
+  scroll-margin-top: calc(var(--header-h) + 2rem);
+  counter-increment: services;
 }
-
-.service-block.is-featured {
-  border-color: rgba(45, 212, 191, 0.35);
-  box-shadow: 0 0 0 1px rgba(45, 212, 191, 0.08);
+.service-block__intro::before {
+  content: '0' counter(services);
+  display: block;
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin-bottom: 1rem;
 }
-
 .service-block h2 {
-  margin: 0 0 0.75rem;
-  font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin: 0 0 1rem;
+  letter-spacing: -0.035em;
 }
-
 .service-block p {
-  margin: 0;
   color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
 }
-
-.note {
-  margin-top: 0.9rem !important;
-  padding: 0.8rem 0.9rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-subtle);
-  font-size: 0.9rem;
+.service-block .note {
+  font-size: 0.8rem;
+  margin-top: 1.25rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--border-strong);
 }
-
 .service-block ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  gap: 0.55rem;
+  align-self: center;
 }
-
 .service-block li {
-  padding: 0.7rem 0.85rem;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-subtle);
-  color: var(--text-secondary);
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  padding-block: 0.85rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.9rem;
 }
-
+.service-block li::before {
+  content: '↗';
+  color: var(--accent);
+}
 .process-section {
-  margin-top: 3.5rem;
+  margin-top: 4rem;
 }
-
 .process-section app-process-steps {
   display: block;
-  margin-top: 1.5rem;
+  margin-top: 2.5rem;
 }
-
-@media (max-width: 860px) {
+@media (max-width: 760px) {
   .service-block {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .services-list {
+    margin-top: 2.5rem;
   }
 }

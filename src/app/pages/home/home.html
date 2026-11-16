@@ -1,67 +1,32 @@
-<section class="hero section">
+<section class="hero">
   <div class="container hero__grid">
     <div class="hero__copy">
       <p class="section-label">{{ 'home.heroLabel' | t }}</p>
-      <h1 class="hero__title">{{ 'home.heroTitle' | t }}</h1>
+      <h1>
+        {{ 'home.heroTitle' | t }} <span>{{ 'home.heroAccent' | t }}</span>
+      </h1>
       <p class="hero__lead">{{ 'home.heroDescription' | t }}</p>
       <div class="hero__actions">
-        <a routerLink="/products" class="btn btn-primary">{{ 'common.exploreProducts' | t }}</a>
-        <a routerLink="/contact" class="btn btn-secondary">{{ 'common.discussProject' | t }}</a>
+        <a routerLink="/contact" class="btn btn-primary">{{ 'common.discussProject' | t }}</a>
+        <a routerLink="/products" class="btn btn-ghost">{{ 'common.exploreProducts' | t }}</a>
+      </div>
+      <div class="hero__location">
+        <span class="location-dot" aria-hidden="true"></span>{{ 'home.heroLocation' | t }}
       </div>
     </div>
-    <div class="hero__visual" aria-hidden="true">
-      <div class="hero-stage">
-        <div class="hero-stage__glow hero-stage__glow--a"></div>
-        <div class="hero-stage__glow hero-stage__glow--b"></div>
-        <div class="hero-stage__grid"></div>
-        <div class="hero-stage__frame">
-          <div class="hero-stage__chrome">
-            <span></span><span></span><span></span>
-            <strong>Postlane</strong>
-          </div>
-          <div class="hero-stage__main-wrap">
-            <img
-              class="hero-stage__main"
-              src="/assets/images/products/postlane-cover.jpg"
-              alt="Postlane"
-              width="960"
-              height="540"
-            />
-          </div>
-        </div>
-        <div class="hero-stage__card hero-stage__card--b">
-          <img src="/assets/images/products/inkplay-cover.jpg" alt="InkPlay" width="320" height="180" />
-          <span>InkPlay</span>
-        </div>
-      </div>
-    </div>
+    <app-hero-universe />
   </div>
-</section>
-
-<section class="section intro">
-  <div class="container intro__shell">
-    <div class="intro__header">
-      <p class="section-label">{{ 'home.introLabel' | t }}</p>
-      <h2 class="intro__title">{{ 'home.introTitle' | t }}</h2>
-      <p class="intro__body">{{ 'home.introBody' | t }}</p>
-      <div class="intro__meta">
-        <span class="intro__location">{{ 'home.introLocation' | t }}</span>
-        <a routerLink="/about" class="intro__link">{{ 'home.introAbout' | t }}</a>
-      </div>
-    </div>
-    <div class="intro__pillars">
-      @for (pillar of introPillars; track pillar.titleKey) {
-        <article class="intro-pillar" [attr.data-tone]="pillar.tone">
-          <span class="intro-pillar__index">{{ pillar.index }}</span>
-          <h3>{{ pillar.titleKey | t }}</h3>
-          <p>{{ pillar.bodyKey | t }}</p>
-        </article>
+  <div class="container portfolio-strip">
+    <span class="portfolio-strip__label">{{ 'home.portfolioLabel' | t }}</span>
+    <div class="portfolio-strip__names">
+      @for (name of portfolioNames; track name) {
+        <span>{{ name }}</span>
       }
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section selected-work">
   <div class="container">
     <div class="section-head">
       <div>
@@ -72,44 +37,57 @@
       <a routerLink="/products" class="btn btn-ghost">{{ 'common.viewAllProducts' | t }}</a>
     </div>
     <div class="featured-grid">
-      @for (product of products; track product.id; let i = $index) {
-        <div class="featured-grid__item" [class.is-primary]="i === 0">
-          <app-product-card [product]="product" [featured]="i === 0" />
-        </div>
+      @for (product of products; track product.id) {
+        <app-product-card [product]="product" />
       }
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section intro">
   <div class="container">
-    <p class="section-label">{{ 'home.teamLabel' | t }}</p>
-    <h2 class="section-title">{{ 'home.teamTitle' | t }}</h2>
-    <p class="section-lead">{{ 'home.teamLead' | t }}</p>
-    <div class="team-grid">
-      @for (member of team; track member.id) {
-        <app-team-card [member]="member" />
+    <div class="intro__header">
+      <div>
+        <p class="section-label">{{ 'home.introLabel' | t }}</p>
+        <h2 class="section-title">{{ 'home.introTitle' | t }}</h2>
+      </div>
+      <div>
+        <p class="section-lead">{{ 'home.introBody' | t }}</p>
+        <a routerLink="/about" class="btn btn-ghost">{{ 'home.introAbout' | t }}</a>
+      </div>
+    </div>
+    <div class="intro__pillars">
+      @for (pillar of introPillars; track pillar.titleKey) {
+        <article class="intro-pillar">
+          <span class="intro-pillar__index">{{ pillar.index }}</span>
+          <h3>{{ pillar.titleKey | t }}</h3>
+          <p>{{ pillar.bodyKey | t }}</p>
+        </article>
       }
     </div>
   </div>
 </section>
 
 <section class="section services-preview">
-  <div class="container">
-    <p class="section-label">{{ 'home.servicesLabel' | t }}</p>
-    <h2 class="section-title">{{ 'home.servicesTitle' | t }}</h2>
-    <p class="section-lead">{{ 'home.servicesLead' | t }}</p>
-    <div class="services-grid">
-      @for (service of services; track service.id) {
-        <article class="service-card surface-card" [class.is-featured]="service.featured">
-          <h3>{{ service.titleKey | t }}</h3>
-          <p>{{ service.summaryKey | t }}</p>
-        </article>
+  <div class="container services-layout">
+    <div class="services-intro">
+      <p class="section-label">{{ 'home.servicesLabel' | t }}</p>
+      <h2 class="section-title">{{ 'home.servicesTitle' | t }}</h2>
+      <p class="section-lead">{{ 'home.servicesLead' | t }}</p>
+      <a routerLink="/services" class="btn btn-ghost">{{ 'common.learnMore' | t }}</a>
+    </div>
+    <div class="services-list">
+      @for (service of services; track service.id; let i = $index) {
+        <a routerLink="/services" [fragment]="service.id" class="service-row">
+          <span class="service-row__index">0{{ i + 1 }}</span>
+          <div>
+            <h3>{{ service.titleKey | t }}</h3>
+            <p>{{ service.summaryKey | t }}</p>
+          </div>
+          <span class="service-row__arrow" aria-hidden="true">↗</span>
+        </a>
       }
     </div>
-    <a routerLink="/services" class="btn btn-secondary services-preview__cta">
-      {{ 'common.learnMore' | t }}
-    </a>
   </div>
 </section>
 
@@ -122,7 +100,7 @@
     </div>
     <ul>
       @for (point of supportPoints; track point) {
-        <li>{{ point | t }}</li>
+        <li><span aria-hidden="true">✓</span>{{ point | t }}</li>
       }
     </ul>
   </div>
@@ -130,13 +108,32 @@
 
 <section class="section">
   <div class="container">
-    <p class="section-label">{{ 'home.approachLabel' | t }}</p>
-    <h2 class="section-title">{{ 'home.approachTitle' | t }}</h2>
-    <p class="section-lead">{{ 'home.approachLead' | t }}</p>
-    <div class="approach-wrap">
-      <app-process-steps />
+    <div class="section-head">
+      <div>
+        <p class="section-label">{{ 'home.approachLabel' | t }}</p>
+        <h2 class="section-title">{{ 'home.approachTitle' | t }}</h2>
+      </div>
+      <p class="section-lead approach-lead">{{ 'home.approachLead' | t }}</p>
     </div>
+    <app-process-steps />
   </div>
 </section>
 
+<section class="section team-section">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <p class="section-label">{{ 'home.teamLabel' | t }}</p>
+        <h2 class="section-title">{{ 'home.teamTitle' | t }}</h2>
+        <p class="section-lead">{{ 'home.teamLead' | t }}</p>
+      </div>
+      <a routerLink="/about" class="btn btn-ghost">{{ 'home.introAbout' | t }}</a>
+    </div>
+    <div class="team-grid">
+      @for (member of team; track member.id) {
+        <app-team-card [member]="member" />
+      }
+    </div>
+  </div>
+</section>
 <app-section-cta titleKey="home.ctaTitle" bodyKey="home.ctaBody" />

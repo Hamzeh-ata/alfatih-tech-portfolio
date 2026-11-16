@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'pos',
     slug: 'point-of-sale',
-    name: 'Point-of-Sale System',
+    name: 'AlfatihPOS',
     order: 4,
     accent: '#34d399',
     visual: 'pos',

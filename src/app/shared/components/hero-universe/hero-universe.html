@@ -1,0 +1,159 @@
+<section class="universe" [attr.aria-label]="'home.universeLabel' | t">
+  <div class="universe__header">
+    <span class="universe__eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 2V22M2 12H22M5 5L19 19M5 19L19 5" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+      {{ 'home.universeLabel' | t }}
+    </span>
+    <span class="universe__edition" aria-hidden="true">AL / FT</span>
+  </div>
+
+  <div class="universe__scene">
+    <svg class="universe__globe" viewBox="0 0 560 510" fill="none" aria-hidden="true">
+      <defs>
+        <radialGradient id="universe-body" cx=".32" cy=".25" r=".8">
+          <stop class="sphere-light" />
+          <stop offset=".6" class="sphere-mid" />
+          <stop offset="1" class="sphere-dark" />
+        </radialGradient>
+        <linearGradient
+          id="universe-rim"
+          x1="130"
+          y1="90"
+          x2="410"
+          y2="420"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop class="line-light" />
+          <stop offset=".5" class="line-blue" />
+          <stop offset="1" class="line-violet" />
+        </linearGradient>
+        <radialGradient id="universe-atmosphere">
+          <stop class="atmosphere-core" />
+          <stop offset="1" class="atmosphere-edge" />
+        </radialGradient>
+        <radialGradient id="universe-shade" cx=".5" cy=".5" r=".5">
+          <stop offset="0" class="shade-core" />
+          <stop offset=".7" class="shade-core" />
+          <stop offset="1" class="shade-edge" />
+        </radialGradient>
+        <clipPath id="universe-clip"><circle cx="280" cy="252" r="148" /></clipPath>
+      </defs>
+
+      <circle cx="280" cy="252" r="238" fill="url(#universe-atmosphere)" />
+      <g class="universe__stars" fill="currentColor">
+        <circle cx="79" cy="108" r="1.5" />
+        <circle cx="457" cy="83" r="1" />
+        <circle cx="494" cy="185" r="1.7" />
+        <circle cx="57" cy="317" r="1" />
+        <circle cx="139" cy="417" r="1.5" />
+        <circle cx="435" cy="405" r="1" />
+        <circle cx="322" cy="55" r="1" />
+        <circle cx="491" cy="337" r="1" />
+        <circle cx="201" cy="71" r="1.5" />
+        <circle cx="338" cy="444" r="1.5" />
+      </g>
+      <g class="universe__orbital-lines">
+        <ellipse cx="280" cy="252" rx="245" ry="99" transform="rotate(-29 280 252)" />
+        <ellipse
+          cx="280"
+          cy="252"
+          rx="222"
+          ry="191"
+          transform="rotate(-29 280 252)"
+          stroke-dasharray="2 11"
+        />
+        <ellipse cx="280" cy="252" rx="195" ry="219" transform="rotate(38 280 252)" />
+      </g>
+
+      <circle
+        cx="280"
+        cy="252"
+        r="148"
+        fill="url(#universe-body)"
+        stroke="url(#universe-rim)"
+        stroke-opacity=".7"
+      />
+      <g clip-path="url(#universe-clip)" class="universe__wireframe">
+        <g transform="rotate(-25 280 252)">
+          <ellipse cx="280" cy="252" rx="31" ry="148" />
+          <ellipse cx="280" cy="252" rx="75" ry="148" />
+          <ellipse cx="280" cy="252" rx="116" ry="148" />
+          <ellipse cx="280" cy="252" rx="148" ry="28" />
+          <ellipse cx="280" cy="252" rx="148" ry="73" />
+          <ellipse cx="280" cy="252" rx="148" ry="116" />
+          <path d="M132 252H428M280 104V400" />
+        </g>
+      </g>
+      <circle cx="280" cy="252" r="148" fill="url(#universe-shade)" />
+      <circle
+        class="universe__rim"
+        cx="280"
+        cy="252"
+        r="149"
+        stroke="url(#universe-rim)"
+        stroke-width="2.5"
+        stroke-dasharray="170 780"
+        transform="rotate(190 280 252)"
+      />
+      <path
+        class="universe__orbit-front"
+        d="M74 358C137 401 478 249 493 150"
+        stroke="url(#universe-rim)"
+        stroke-width="1.5"
+      />
+      <circle cx="493" cy="150" r="4" class="universe__satellite" />
+      <circle cx="493" cy="150" r="10" class="universe__satellite-halo" />
+      <circle cx="111" cy="364" r="3" class="universe__satellite" />
+      <path d="M419 357V371M412 364H426" class="universe__spark" />
+    </svg>
+
+    <div class="universe__wordmark" aria-hidden="true">
+      <span>{{ 'brand.short' | t }}<span class="universe__period">.</span></span>
+      <small>{{ 'home.universeCore' | t }}</small>
+    </div>
+
+    <div class="universe__products">
+      @for (link of productLinks; track link.path) {
+        <a [routerLink]="link.path" class="orbit-product" [class]="link.className">
+          <span class="orbit-product__icon">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                [attr.d]="link.iconPath"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+          <span class="orbit-product__copy">
+            <strong>{{ link.name }}</strong>
+            <small>{{ link.categoryKey | t }}</small>
+          </span>
+          <svg class="orbit-product__arrow" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M5 15L15 5M5 5H15V15" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </a>
+      }
+    </div>
+  </div>
+
+  <div class="universe__footer">
+    <div class="universe__count">
+      <strong>{{ productCount }}</strong
+      ><span>{{ 'productsPage.countLabel' | t }}<br />{{ 'home.universeCount' | t }}</span>
+    </div>
+    <a
+      routerLink="/products"
+      class="universe__explore"
+      [attr.aria-label]="'home.universeExplore' | t"
+    >
+      <span>{{ 'home.universeExplore' | t }}</span>
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M7 17L17 7M7 7H17V17" stroke="currentColor" stroke-width="1.5" />
+      </svg>
+    </a>
+  </div>
+</section>

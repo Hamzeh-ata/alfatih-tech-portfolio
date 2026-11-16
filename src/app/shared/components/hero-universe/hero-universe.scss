@@ -1,0 +1,385 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+.universe {
+  position: relative;
+  isolation: isolate;
+  container-type: inline-size;
+  overflow: hidden;
+  aspect-ratio: 1 / 1.12;
+  background: var(--universe-bg);
+  color: var(--on-dark);
+  border: 1px solid var(--universe-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--universe-shadow);
+}
+.universe::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse at 40% 38%, var(--universe-glow), transparent 64%),
+    radial-gradient(ellipse at 100% 100%, var(--universe-violet-glow), transparent 50%);
+}
+.universe::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 0 var(--universe-edge);
+}
+.universe__header {
+  position: absolute;
+  z-index: 2;
+  inset: 5.5% 6% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.universe__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--universe-text);
+  font-weight: 550;
+}
+.universe__eyebrow svg {
+  width: 18px;
+  height: 18px;
+  color: var(--universe-cyan);
+  flex-shrink: 0;
+}
+.universe__edition {
+  color: var(--universe-text);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  direction: ltr;
+}
+.universe__scene {
+  position: absolute;
+  inset: 10% 0 15%;
+  direction: ltr;
+}
+.universe__globe {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transition: transform 500ms var(--ease);
+}
+.sphere-light {
+  stop-color: var(--universe-sphere-light);
+}
+.sphere-mid {
+  stop-color: var(--universe-sphere-mid);
+}
+.sphere-dark {
+  stop-color: var(--universe-bg);
+}
+.line-light {
+  stop-color: var(--universe-cyan);
+}
+.line-blue {
+  stop-color: var(--universe-blue);
+}
+.line-violet {
+  stop-color: var(--universe-violet);
+}
+.atmosphere-core {
+  stop-color: var(--universe-blue);
+  stop-opacity: 0.28;
+}
+.atmosphere-edge {
+  stop-color: var(--universe-blue);
+  stop-opacity: 0;
+}
+.shade-core {
+  stop-color: var(--universe-bg);
+  stop-opacity: 0.1;
+}
+.shade-edge {
+  stop-color: var(--universe-bg);
+  stop-opacity: 0.55;
+}
+.universe__stars {
+  color: var(--universe-cyan);
+  opacity: 0.65;
+}
+.universe__orbital-lines {
+  stroke: var(--universe-line);
+  stroke-width: 0.7;
+}
+.universe__wireframe {
+  stroke: var(--universe-grid);
+  stroke-width: 0.65;
+}
+.universe__rim {
+  filter: drop-shadow(0 0 7px var(--universe-blue));
+}
+.universe__orbit-front {
+  opacity: 0.85;
+}
+.universe__satellite {
+  fill: var(--universe-cyan);
+}
+.universe__satellite-halo {
+  fill: var(--universe-cyan);
+  opacity: 0.13;
+}
+.universe__spark {
+  stroke: var(--universe-violet);
+  stroke-width: 1.5;
+}
+.universe__wordmark {
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+  width: 50%;
+  pointer-events: none;
+  color: var(--on-dark);
+}
+.universe__wordmark > span {
+  font-size: clamp(2rem, 8.5cqi, 3.3rem);
+  line-height: 1;
+  font-weight: 750;
+  letter-spacing: -0.065em;
+  text-shadow: 0 4px 30px var(--universe-bg);
+}
+.universe__period {
+  color: var(--universe-cyan);
+}
+.universe__wordmark small {
+  color: var(--universe-text);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+.orbit-product {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 52px;
+  padding: 0.75rem;
+  border: 1px solid var(--universe-border);
+  border-radius: 14px;
+  background: var(--universe-card);
+  box-shadow: var(--universe-card-shadow);
+  transition:
+    transform 220ms var(--ease),
+    border-color 220ms ease,
+    background 220ms ease;
+  direction: ltr;
+}
+.orbit-product::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(135deg, var(--universe-edge), transparent 40%);
+  opacity: 0.7;
+}
+.orbit-product__icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: var(--universe-icon-bg);
+  color: var(--universe-cyan);
+  border: 1px solid var(--universe-border);
+}
+.orbit-product__icon svg {
+  width: 21px;
+  height: 21px;
+}
+.orbit-product__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.orbit-product strong {
+  color: var(--on-dark);
+  font-size: 0.85rem;
+  line-height: 1.2;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.orbit-product small {
+  color: var(--universe-text);
+  font-size: 0.65rem;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+.orbit-product__arrow {
+  flex-shrink: 0;
+  width: 13px;
+  height: 13px;
+  margin-inline-start: 0.4rem;
+  color: var(--universe-text);
+  transition: color 180ms ease;
+}
+.orbit-product:hover,
+.orbit-product:focus-visible {
+  transform: translateY(-5px);
+  border-color: var(--universe-cyan);
+  background: var(--universe-card-active);
+}
+.orbit-product:hover .orbit-product__arrow,
+.orbit-product:focus-visible .orbit-product__arrow {
+  color: var(--universe-cyan);
+}
+.universe a:focus-visible {
+  outline-color: var(--universe-cyan);
+  outline-offset: 4px;
+}
+.postlane {
+  top: 14%;
+  left: 5%;
+}
+.inkplay {
+  top: 66%;
+  right: 4%;
+}
+.inkplay .orbit-product__icon {
+  color: var(--universe-violet);
+}
+.schoolwatch {
+  bottom: 6%;
+  left: 7%;
+}
+.universe:has(.orbit-product:hover) .universe__globe,
+.universe:has(.orbit-product:focus-visible) .universe__globe {
+  transform: rotate(-5deg) scale(1.025);
+}
+.universe__footer {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 6%;
+  min-height: 17%;
+  border-top: 1px solid var(--universe-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.universe__count {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.universe__count strong {
+  font-size: clamp(1.8rem, 7cqi, 2.5rem);
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+.universe__count > span {
+  color: var(--universe-text);
+  font-size: 0.7rem;
+  line-height: 1.6;
+}
+.universe__explore {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 44px;
+  color: var(--on-dark);
+  font-size: 0.7rem;
+}
+.universe__explore svg {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  padding: 10px;
+  border: 1px solid var(--universe-border);
+  border-radius: 50%;
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+.universe__explore:hover svg {
+  background: var(--universe-cyan);
+  color: var(--universe-bg);
+}
+:host-context([dir='rtl']) .universe__eyebrow,
+:host-context([dir='rtl']) .universe__wordmark > span,
+:host-context([dir='rtl']) .universe__wordmark small {
+  letter-spacing: 0;
+}
+:host-context([dir='rtl']) .orbit-product__copy small {
+  direction: rtl;
+  text-align: start;
+}
+:host-context([dir='rtl']) .universe__explore svg {
+  transform: scaleX(-1);
+}
+@container (max-width: 400px) {
+  .orbit-product__copy small {
+    display: none;
+  }
+  .orbit-product strong {
+    font-size: 0.75rem;
+  }
+  .orbit-product {
+    gap: 0.5rem;
+    padding: 0.55rem;
+    min-height: 48px;
+    border-radius: 11px;
+  }
+  .orbit-product__icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+  }
+  .orbit-product__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .orbit-product__arrow {
+    display: none;
+  }
+  .universe__wordmark {
+    top: 48%;
+  }
+  .universe__explore {
+    gap: 0.5rem;
+  }
+  .universe__explore svg {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+  }
+}
+@media (max-width: 760px) {
+  :host {
+    max-width: 560px;
+    width: 100%;
+    margin-inline: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .universe__globe,
+  .orbit-product {
+    transition: none;
+  }
+  .universe:has(.orbit-product:hover) .universe__globe,
+  .universe:has(.orbit-product:focus-visible) .universe__globe,
+  .orbit-product:hover,
+  .orbit-product:focus-visible {
+    transform: none;
+  }
+}

@@ -1,92 +1,139 @@
 .contact-layout {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
-  gap: 1.5rem;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 5rem;
   align-items: start;
 }
-
-.details,
-.form {
-  padding: 1.4rem;
+.details {
+  margin-top: 2.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
 }
-
-.details h2,
-.form h2 {
-  margin: 0 0 1rem;
-  font-size: 1.15rem;
+.details h2 {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
 }
-
 .details ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 0.9rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
 }
-
 .details li {
-  display: grid;
-  gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
 }
-
 .details span {
+  font-size: 0.7rem;
   color: var(--text-muted);
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
-
 .details a,
 .details strong {
-  color: var(--text-primary);
+  width: fit-content;
+  font-size: 0.85rem;
   font-weight: 600;
+  overflow-wrap: anywhere;
 }
-
+.details a:hover {
+  color: var(--accent);
+}
 .form {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: var(--shadow-soft);
   display: grid;
-  gap: 0.95rem;
+  gap: 1.2rem;
 }
-
+.form h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+  letter-spacing: -0.035em;
+}
 label {
   display: grid;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
-
-label span {
-  font-weight: 600;
-  font-size: 0.92rem;
+label > span {
+  font-weight: 650;
+  font-size: 0.8rem;
 }
-
 input,
 select,
 textarea {
   width: 100%;
+  min-height: 48px;
   border: 1px solid var(--border-subtle);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.02);
-  padding: 0.8rem 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-base);
+  padding: 0.7rem 0.85rem;
+  font-size: 1rem;
+  transition: border-color 180ms ease;
 }
-
+textarea {
+  resize: vertical;
+  min-height: 145px;
+}
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--border-strong);
+}
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: var(--border-strong);
+  border-color: var(--accent);
+  background: var(--bg-elevated);
 }
-
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched {
+  border-color: var(--danger);
+}
 em {
   color: var(--danger);
+  font-size: 0.75rem;
   font-style: normal;
-  font-size: 0.82rem;
 }
-
-.fallback-note {
+.fallback-note,
+.field-hint {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
   margin: 0;
-  color: var(--text-muted);
-  font-size: 0.88rem;
 }
-
-@media (max-width: 900px) {
+.form .btn {
+  width: 100%;
+}
+@media (max-width: 1050px) {
   .contact-layout {
+    gap: 2.5rem;
+  }
+  .details ul {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 760px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+  .details ul {
+    grid-template-columns: 1fr 1fr;
+  }
+  .details a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width: 400px) {
+  .details ul {
     grid-template-columns: 1fr;
   }
 }

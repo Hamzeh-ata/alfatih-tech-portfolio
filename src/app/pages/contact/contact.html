@@ -17,7 +17,7 @@
             <a class="ltr-keep" [href]="phoneHref">{{ contact.phone }}</a>
           </li>
           <li>
-            <span>{{ 'footer.location' | t }}</span>
+            <span>{{ 'contact.locationLabel' | t }}</span>
             <strong>{{ contact.locationKey | t }}</strong>
           </li>
           <li>
@@ -35,9 +35,17 @@
 
       <label>
         <span>{{ 'contact.name' | t }}</span>
-        <input type="text" formControlName="name" autocomplete="name" />
+        <input
+          type="text"
+          formControlName="name"
+          autocomplete="name"
+          required
+          minlength="2"
+          [attr.aria-invalid]="form.controls.name.touched && form.controls.name.invalid"
+          aria-describedby="name-error"
+        />
         @if (form.controls.name.invalid && (form.controls.name.touched || submittedAttempt())) {
-          <em>{{ 'contact.required' | t }}</em>
+          <em id="name-error">{{ 'contact.nameError' | t }}</em>
         }
       </label>
 
@@ -48,15 +56,30 @@
 
       <label>
         <span>{{ 'contact.email' | t }}</span>
-        <input type="email" formControlName="email" class="ltr-keep" autocomplete="email" />
+        <input
+          type="email"
+          formControlName="email"
+          class="ltr-keep"
+          autocomplete="email"
+          required
+          [attr.aria-invalid]="form.controls.email.touched && form.controls.email.invalid"
+          aria-describedby="email-error"
+        />
         @if (form.controls.email.invalid && (form.controls.email.touched || submittedAttempt())) {
-          <em>{{ 'contact.invalidEmail' | t }}</em>
+          <em id="email-error">{{ 'contact.invalidEmail' | t }}</em>
         }
       </label>
 
       <label>
         <span>{{ 'contact.inquiryType' | t }}</span>
-        <select formControlName="inquiryType">
+        <select
+          formControlName="inquiryType"
+          required
+          [attr.aria-invalid]="
+            form.controls.inquiryType.touched && form.controls.inquiryType.invalid
+          "
+          aria-describedby="inquiry-error"
+        >
           <option value="">{{ 'contact.selectInquiry' | t }}</option>
           @for (option of inquiryOptions; track option.value) {
             <option [value]="option.value">{{ option.labelKey | t }}</option>
@@ -66,15 +89,26 @@
           form.controls.inquiryType.invalid &&
           (form.controls.inquiryType.touched || submittedAttempt())
         ) {
-          <em>{{ 'contact.required' | t }}</em>
+          <em id="inquiry-error">{{ 'contact.required' | t }}</em>
         }
       </label>
 
       <label>
         <span>{{ 'contact.message' | t }}</span>
-        <textarea formControlName="message" rows="6"></textarea>
-        @if (form.controls.message.invalid && (form.controls.message.touched || submittedAttempt())) {
-          <em>{{ 'contact.required' | t }}</em>
+        <textarea
+          formControlName="message"
+          rows="5"
+          required
+          minlength="20"
+          [placeholder]="'contact.messagePlaceholder' | t"
+          [attr.aria-invalid]="form.controls.message.touched && form.controls.message.invalid"
+          aria-describedby="message-hint message-error"
+        ></textarea>
+        <small class="field-hint" id="message-hint">{{ 'contact.messageHint' | t }}</small>
+        @if (
+          form.controls.message.invalid && (form.controls.message.touched || submittedAttempt())
+        ) {
+          <em id="message-error">{{ 'contact.messageError' | t }}</em>
         }
       </label>
 

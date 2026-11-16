@@ -1,52 +1,74 @@
 .about-lead {
+  max-width: 44rem;
   margin: 0;
-  max-width: 48rem;
   color: var(--text-secondary);
-  font-size: 1.08rem;
+  font-size: 1.15rem;
+  line-height: 1.9;
 }
-
 .values {
-  margin-top: 2.5rem;
+  padding-top: 4rem;
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-subtle);
 }
-
 .values h2 {
-  margin: 0 0 1rem;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  margin: 0 0 2rem;
+  letter-spacing: -0.03em;
 }
-
 .values__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
+  counter-reset: values;
 }
-
 .value-card {
-  padding: 1.25rem;
+  padding: 2rem;
+  counter-increment: values;
+  background: var(--bg-elevated);
 }
-
+.value-card::before {
+  content: '0' counter(values);
+  display: block;
+  color: var(--accent);
+  font-size: 0.75rem;
+  margin-bottom: 2.5rem;
+}
 .value-card h3 {
-  margin: 0 0 0.55rem;
+  font-size: 1.4rem;
+  margin: 0 0 1rem;
 }
-
 .value-card p {
   margin: 0;
   color: var(--text-secondary);
+  font-size: 0.95rem;
 }
-
 .team-section {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
-
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
-
 @media (max-width: 900px) {
+  .values__grid {
+    gap: 1rem;
+  }
+  .value-card {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 760px) {
   .values__grid,
   .team-grid {
     grid-template-columns: 1fr;
+  }
+  .values {
+    margin-top: 3rem;
+    padding-top: 3rem;
+  }
+  .value-card::before {
+    margin-bottom: 1.25rem;
   }
 }
